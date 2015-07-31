@@ -19,5 +19,5 @@ $('.scrollable-container').showuptrigger({
 - Tested with jQuery 1.11.x
 
 ## Changelog
-### Version 0.0.1
+#### Version 0.0.1
 - Initial version
