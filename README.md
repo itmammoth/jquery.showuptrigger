@@ -5,7 +5,11 @@ showuptrigger is a jQuery plugin that allows you to set a callback function when
 - Adapted also for overflow elements
 
 ## Usage
-Include jquery.showuptrigger-*VERSION*.min.js after jQuery.
+Include jquery.showuptrigger-*VERSION*.min.js after jQuery like below
+```
+<script src="lib/jquery-1.11.x.min.js"></script>
+<script src="showuptrigger-0.0.1.min.js"></script>
+```
 
 Then,
 ```
