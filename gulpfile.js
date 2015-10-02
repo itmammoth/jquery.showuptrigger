@@ -13,7 +13,7 @@ gulp.task('js', function() {
       .pipe(plumber())
       .pipe(uglify())
       .pipe(gulp.dest('./js/min'))
-      .pipe(browser.reload({ stream: true }))
+      .pipe(browser.reload({ stream: true }));
 });
 
 gulp.task('server', function() {
@@ -24,3 +24,5 @@ gulp.task('server', function() {
     }
   });
 });
+
+gulp.task('build', ['js'], function() {});
