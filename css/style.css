@@ -1,15 +1,20 @@
 .column {
   float: left;
   display: block;
+  text-align: center;
   padding: 2px;
   margin: 10px;
-  background: #ccc;
-  width: 200px;
+  background: pink;
+  width: 300px;
 }
 
 .container {
   overflow: scroll;
   height: 200px;
+}
+
+.first, .last {
+  font-weight: bold;
 }
 
 table.fixed {

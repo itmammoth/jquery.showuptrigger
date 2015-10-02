@@ -1,22 +1,21 @@
 $(document).ready(function() {
   $(window).showuptrigger({
-    trigger: '#last1',
-    callback: function() { alert('welcome to last1!'); },
+    trigger: '#last-of-body-contains',
+    callback: function() { alert("Welcome to the last of 'window contains'"); },
   });
-  $(window).showuptrigger({
-    trigger: '#last2',
-    callback: function() { alert('welcome to last2!'); },
-  });
+
   $('.container').showuptrigger({
-    trigger: '#last3',
-    callback: function() { alert('welcome to last3!'); },
+    trigger: '#last-of-div-contains',
+    callback: function() { alert("Welcome to the last of 'div contains'"); },
   });
+
   $('.fixed tbody').showuptrigger({
-    trigger: '#last4',
-    callback: function() { alert('welcome to last4!'); },
+    trigger: '#last-of-tbody-contains',
+    callback: function() { alert("Welcome to the last of 'tbody contains'"); },
   });
+
   $(window).showuptrigger({
-    trigger: '#last5',
-    callback: function() { alert('keep silence'); },
+    trigger: '#last-of-off',
+    callback: function() { alert('Never called'); },
   }).showuptrigger('off');
 });
