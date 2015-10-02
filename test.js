@@ -15,4 +15,8 @@ $(document).ready(function() {
     trigger: '#last4',
     callback: function() { alert('welcome to last4!'); },
   });
+  $(window).showuptrigger({
+    trigger: '#last5',
+    callback: function() { alert('keep silence'); },
+  }).showuptrigger('off');
 });

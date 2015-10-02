@@ -11,18 +11,41 @@
  */
 (function($) {
   /*
-   * jQuery plugin
+   * Instance methods
    */
-  $.fn.showuptrigger = function(options) {
-    var settings = $.extend({
-      trigger: '#showuptrigger',  // trigger element (jQeury object or selector)
-      callback: function() {},    // callback function
-    }, options);
+  var methods = {
+    init: function(options) {
+      var settings = $.extend({
+        trigger: '#showuptrigger',  // trigger element (jQeury object or selector)
+        callback: function() {},    // callback function
+      }, options);
 
-    return this.each(function() {
-      var showupTrigger = ShowupTrigger.createInstance(this, settings);
-      showupTrigger.observe();
-    });
+      return this.each(function() {
+        var showupTrigger = ShowupTrigger.createInstance(this, settings);
+        showupTrigger.observe();
+        $(this).data('showuptrigger', showupTrigger);
+      });
+    },
+
+    off: function() {
+      return this.each(function() {
+        var showupTrigger = $(this).data('showuptrigger');
+        showupTrigger.stopObserving();
+      });
+    },
+  };
+
+  /*
+   * plugin
+   */
+  $.fn.showuptrigger = function(method) {
+    if (methods[method]) {
+      return methods[method].apply(this, Array.prototype.slice.call(arguments, 1));
+    } else if (typeof method === 'object' || !method) {
+      return methods.init.apply(this, arguments);
+    } else {
+      $.error('Method ' +  method + ' does not exist on jQuery.tooltip');
+    }
   };
 
   /*
@@ -43,15 +66,19 @@
     // instance methods
     ShowupTrigger.prototype = {
       observe: function() {
-        var eventId = this.generateId();
+        this.eventId = this.generateId();
         var that = this;
 
-        this.$container.on('scroll.' + eventId, function(e) {
+        this.$container.on('scroll.' + this.eventId, function(e) {
           if (that.calcVisibleBottom() > that.calcTriggerTop()) {
-            that.$container.off('.' + eventId);
+            that.$container.off('.' + that.eventId);
             that.settings.callback();
           }
         });
+      },
+
+      stopObserving: function() {
+        this.$container.off('.' + this.eventId);
       },
 
       generateId: function() {
