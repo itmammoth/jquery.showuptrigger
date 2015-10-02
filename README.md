@@ -37,7 +37,7 @@ $container.showuptrigger('off');  // Stop observing
 - Tested with jQuery 1.11.x
 
 ## Contribution
-- Fork me, then ```$ npm install```
+Fork me, then ```$ npm install``` and ```$ npm start```
 
 ## Changelog
 
