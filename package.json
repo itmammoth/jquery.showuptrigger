@@ -1,0 +1,30 @@
+{
+  "name": "showuptrigger",
+  "version": "0.0.1",
+  "description": "A jQuery plugin that allows you to set a callback function when an element shows up.",
+  "main": "showuptrigger-0.0.1.js",
+  "scripts": {
+    "start": "node_modules/gulp/bin/gulp.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itmammoth/jquery.showuptrigger.git"
+  },
+  "keywords": [
+    "jquery",
+    "showuptrigger"
+  ],
+  "author": "itmammoth",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/itmammoth/jquery.showuptrigger/issues"
+  },
+  "homepage": "https://github.com/itmammoth/jquery.showuptrigger#readme",
+  "devDependencies": {
+    "browser-sync": "^2.9.8",
+    "gulp": "^3.9.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-uglify": "^1.4.1",
+    "jquery.1": "^1.0.0"
+  }
+}

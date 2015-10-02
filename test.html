@@ -1,20 +1,56 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <script src="lib/jquery-1.11.2.min.js"></script>
-        <script src="showuptrigger-0.0.1.js"></script>
-<!--        <script src="showuptrigger-0.0.1.min.js"></script>-->
-        <script src="test.js"></script>
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-        <title>showuptrigger</title>
-    </head>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="node_modules/jquery.1/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="js/min/showuptrigger-0.0.1.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>showuptrigger</title>
+  </head>
 
-    <body>
-      <h1>showuptrigger</h1>
+  <body>
+    <h1>showuptrigger</h1>
 
-      <div class="column">
-        <p class="first">window contains</p>
+    <div class="column">
+      <p class="first">window contains</p>
+      <p>|</p>
+      <p>|</p>
+      <p>|</p>
+      <p>|</p>
+      <p>|</p>
+      <p>|</p>
+      <p>|</p>
+      <p>|</p>
+      <p>|</p>
+      <p>|</p>
+      <p>|</p>
+      <p>|</p>
+      <p>|</p>
+      <p>|</p>
+      <p>|</p>
+      <p>|</p>
+      <p>|</p>
+      <p>|</p>
+      <p>|</p>
+      <p>|</p>
+      <p>|</p>
+      <p>|</p>
+      <p>|</p>
+      <p>|</p>
+      <p>|</p>
+      <p>|</p>
+      <p>|</p>
+      <p>|</p>
+      <p>|</p>
+      <p>|</p>
+      <p>|</p>
+      <p>|</p>
+      <p id="last-of-body-contains" class="last">find me!</p>
+    </div>
+
+    <div class="column">
+      <div class="container">
+        <p class="first">div contains</p>
         <p>|</p>
         <p>|</p>
         <p>|</p>
@@ -31,100 +67,88 @@
         <p>|</p>
         <p>|</p>
         <p>|</p>
-        <p>|</p>
-        <p>|</p>
-        <p>|</p>
-        <p>|</p>
-        <p>|</p>
-        <p>|</p>
-        <p>|</p>
-        <p>|</p>
-        <p>|</p>
-        <p>|</p>
-        <p>|</p>
-        <p>|</p>
-        <p>|</p>
-        <p>|</p>
-        <p id="last-of-body-contains" class="last">find me!</p>
+        <p id="last-of-div-contains" class="last">find me!</p>
       </div>
+    </div>
 
-      <div class="column">
-        <div class="container">
-          <p class="first">div contains</p>
-          <p>|</p>
-          <p>|</p>
-          <p>|</p>
-          <p>|</p>
-          <p>|</p>
-          <p>|</p>
-          <p>|</p>
-          <p>|</p>
-          <p>|</p>
-          <p>|</p>
-          <p>|</p>
-          <p>|</p>
-          <p>|</p>
-          <p>|</p>
-          <p>|</p>
-          <p>|</p>
-          <p id="last-of-div-contains" class="last">find me!</p>
-        </div>
-      </div>
+    <div class="column">
+      <table class="fixed">
+        <thead>
+          <tr><th>tbody contains</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>|</td></tr>
+          <tr><td>|</td></tr>
+          <tr><td>|</td></tr>
+          <tr><td>|</td></tr>
+          <tr><td>|</td></tr>
+          <tr><td>|</td></tr>
+          <tr><td>|</td></tr>
+          <tr><td>|</td></tr>
+          <tr><td>|</td></tr>
+          <tr><td>|</td></tr>
+          <tr><td>|</td></tr>
+          <tr><td>|</td></tr>
+          <tr><td>|</td></tr>
+          <tr><td>|</td></tr>
+          <tr><td>|</td></tr>
+          <tr><td>|</td></tr>
+          <tr><td>|</td></tr>
+          <tr><td id="last-of-tbody-contains" class="last">find me!</td></tr>
+        </tbody>
+      </table>
+    </div>
 
-      <div class="column">
-        <table class="fixed">
-          <thead>
-            <tr><th>tbody contains</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>|</td></tr>
-            <tr><td>|</td></tr>
-            <tr><td>|</td></tr>
-            <tr><td>|</td></tr>
-            <tr><td>|</td></tr>
-            <tr><td>|</td></tr>
-            <tr><td>|</td></tr>
-            <tr><td>|</td></tr>
-            <tr><td>|</td></tr>
-            <tr><td>|</td></tr>
-            <tr><td>|</td></tr>
-            <tr><td>|</td></tr>
-            <tr><td>|</td></tr>
-            <tr><td>|</td></tr>
-            <tr><td>|</td></tr>
-            <tr><td>|</td></tr>
-            <tr><td>|</td></tr>
-            <tr><td id="last-of-tbody-contains" class="last">find me!</td></tr>
-          </tbody>
-        </table>
-      </div>
+    <div class="column">
+      <p class="first">$el.scrolltrigger('off')</p>
+      <p>|</p>
+      <p>|</p>
+      <p>|</p>
+      <p>|</p>
+      <p>|</p>
+      <p>|</p>
+      <p>|</p>
+      <p>|</p>
+      <p>|</p>
+      <p>|</p>
+      <p>|</p>
+      <p>|</p>
+      <p>|</p>
+      <p>|</p>
+      <p>|</p>
+      <p>|</p>
+      <p>|</p>
+      <p>|</p>
+      <p>|</p>
+      <p>|</p>
+      <p>|</p>
+      <p>|</p>
+      <p>|</p>
+      <p id="last-of-off" class="last">stopped observing</p>
+    </div>
 
-      <div class="column">
-        <p class="first">$el.scrolltrigger('off')</p>
-        <p>|</p>
-        <p>|</p>
-        <p>|</p>
-        <p>|</p>
-        <p>|</p>
-        <p>|</p>
-        <p>|</p>
-        <p>|</p>
-        <p>|</p>
-        <p>|</p>
-        <p>|</p>
-        <p>|</p>
-        <p>|</p>
-        <p>|</p>
-        <p>|</p>
-        <p>|</p>
-        <p>|</p>
-        <p>|</p>
-        <p>|</p>
-        <p>|</p>
-        <p>|</p>
-        <p>|</p>
-        <p>|</p>
-        <p id="last-of-off" class="last">stopped observing</p>
-      </div>
-    </body>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $(window).showuptrigger({
+          trigger: '#last-of-body-contains',
+          callback: function() { alert("Welcome to the last of 'window contains'"); },
+        });
+
+        $('.container').showuptrigger({
+          trigger: '#last-of-div-contains',
+          callback: function() { alert("Welcome to the last of 'div contains'"); },
+        });
+
+        $('.fixed tbody').showuptrigger({
+          trigger: '#last-of-tbody-contains',
+          callback: function() { alert("Welcome to the last of 'tbody contains'"); },
+        });
+
+        $(window).showuptrigger({
+          trigger: '#last-of-off',
+          callback: function() { alert('Never called'); },
+        }).showuptrigger('off');
+      });
+    </script>
+  </body>
 </html>
